@@ -26,7 +26,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" Goto definition with F3
+" Goto definition with F3"
 map <leader>b :YcmCompleter GoTo<CR>
 map <leader>r :YcmCompleter GoToReferences<CR>
 map <leader>w :w!<CR>
@@ -40,43 +40,4 @@ set backspace=indent,eol,start
 set number
 set cursorline
 
-highlight LineNr ctermfg=grey
-
-""syntax enable
-"set background=dark
-"set encoding=utf-8
-"set showcmd                     " display incomplete commands
-"set autoindent                  " automatically indent
-"set pastetoggle=<F12>           " toggle paste anbd nopaste
-"nnoremap <CR> :noh<CR><CR>      " pressing enter after a search clears highlighting
-"
-""Tmux setting
-"map <Esc>[B <Down>
-"
-"
-""" Whitespace
-"" set nowrap                      " don't wrap lines
-"" set tabstop=4 shiftwidth=4      " a tab is two spaces (or set this to 4)
-"" set expandtab                   " use spaces, not tabs (optional)
-"" autocmd FileType make setlocal noexpandtab
-"set backspace=indent,eol,start  " backspace through everything in insert mode
-"" set softtabstop=4
-"
-""" Searching
-set hlsearch                    " highlight matches
-"set incsearch                   " incremental searching
-"set ignorecase                  " searches are case insensitive...
-"set smartcase                   " ... unless they contain at least one capital letter
-"
-""" C Specific
-"set cindent
-"
-"
-"filetype on                 " Syntx highlighting
-""filetype plugin indent on   " try to detect filetypes
-"
-"set foldmethod=indent
-"set foldlevel=99
-"
-"highlight ColorColumn ctermbg=gray
-""" set colorcolumn=80
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=Grey guibg=NONE
