@@ -30,13 +30,11 @@ root: ~
 
 windows:
   - editor:
-      layout: fe4a,176x51,0,0{88x51,0,0,9,87x51,89,0[87x25,89,0,│
-             10,87x25,89,26,13]} 
+      layout: 7315,272x62,0,0{136x62,0,0,0,135x62,137,0,1} 
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        -
         -
         -
         #  - server: bundle exec rails s
