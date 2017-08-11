@@ -27,11 +27,23 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " Goto definition with F3"
+"
+"
+"   HOW TO ...
+"
+" %s/foo/bar/g       " find and replace
+" %s/foo/bar/gc      " find and replace requiring confirmation 
+
 map <leader>b :YcmCompleter GoTo<CR>
 map <leader>r :YcmCompleter GoToReferences<CR>
 map <leader>w :w!<CR>
 map <leader>q :q<CR>
 map <leader>z :wq<CR>
+map <leader>p :bp<CR>
+map <leader>o :bn<CR>
+map <leader>d :bd<CR>
+map <leader>l :ls<CR>
+
 syntax on
 filetype plugin indent on
 colorscheme torte
@@ -40,4 +52,5 @@ set backspace=indent,eol,start
 set number
 set cursorline
 
+set hlsearch
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=Grey guibg=NONE

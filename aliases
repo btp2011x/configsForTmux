@@ -7,3 +7,6 @@ alias cselabs="ssh pete9934@kh4250-05.cselabs.umn.edu"
 alias tolabs="scp ~/csci2041/repo-pete9934/Lab_06/lab_06.ml pete9934@kh4250-05.cselabs.umn.edu:~/csci2041/repo-pete9934/Lab_06/lab_06.ml"
 alias fromlabs="scp -r pete9934@kh4250-05.cselabs.umn.edu:~/csci2041/repo-pete9934/Lab_06/lab_06.ml ~/csci2041/repo-pete9934/Lab_06/lab_06.ml"
 alias gcm="git commit -m"
+alias bashrc='vi ~/.bashrc'
+alias bashp='vi ~/.bash_profile'
+
