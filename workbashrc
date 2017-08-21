@@ -1,0 +1,41 @@
+
+## aliases ##
+
+alias setup='~/github/ec2metadata-role-assumption/setup.sh'
+alias devget='credstash -t dev-credstash get trans.transformation.commerce-translator.ct.migrator.password'
+alias devput='credstash -t dev-credstash put -a -k alias/dev-credstash trans.transformation.commerce-translator.majortest-outbound.datagather.bucket <******>'
+alias prodget='credstash -t prod-credstash get trans.transformation.commerce-translator.majortest-outbound.datagather.bucket'
+alias prodput='credstash -t prod-credstash put -a -k alias/prod-credstash trans.transformation.commerce-translator.majortest-outbound.datagather.bucket <******>'
+alias gcm='git commit -m'
+alias gs='git status'
+alias gck='git checkout'
+alias gb='git branch'
+alias tmux='tmuxinator default'
+alias makedaemon='make -C ~/github/ec2metadata-role-assumption daemon'
+alias runsetup='~/github/ec2metadata-role-assumption/setup.sh'
+alias enva='echo "executing: env | grep AWS" && echo "" && env | grep AWS'
+alias update='echo "update ctmigration.dev_all_capabilities_b2b_dc4 set migration_date = current_date where capability_uid = 1585896;" | pbcopy'
+alias check='echo "select b2b_company, majortest_status, migration_date, capability_uid from ctmigration.dev_all_capabilities_b2b_dc4 where migration_date=current_date;" | pbcopy'
+alias ctout='cd ~/github/ct-outbound-testing/'
+alias pullups='git pull upstream master && echo "pulling upstream from SPSCommerce (git pull upstream master)"'
+#alias rmgwbridge='docker network disconnect -f docker_gwbridge  gateway_ingress-sbox &&
+#		  docker network rm docker_gwbridge'
+#alias copybackjtt='cp ~/github/backup-my-jtt/Makefile ~/github/edi-jackalope/jackalope-testtools/Makefile &&
+#		     cp ~/github/backup-my-jtt/conf/majortest.properties ~/github/edi-jackalope/jackalope-testtools/conf/majortest.properties'
+alias ec2meta='cd ~/github/ec2metadata-role-assumption' 
+alias pingport='nc -vz' # argument order: <endpoint> <port>
+#alias devrole='echo "arn:aws:iam::056684691971:role/admin/credstash/commerce-translator/dev/dev-commerce-translator-credsta-CredstashAdminRole-14ZJAUOHBLMD8" | pbcopy'
+alias dockertime="docker run -it --rm --privileged --pid=host debian nsenter -t 1 -m -i sh -c 'ntpd -q -n -p pool.ntp.org'"
+#alias pycall='pycallgraph graphviz --' 
+#alias mwg='cd ~/github/edi-jackalope/jackalope-inbound-testtools/majortest-worker-gatherer/'
+#alias jtt='cd ~/github/edi-jackalope/jackalope-testtools/'
+#alias inrole='echo "arn:aws:iam::056684691971:role/app/dev-ct-migration-worker-AppInstanceRole-VS6ISLYD3VTC" | pbcopy'
+#alias jttrole='echo $(aws iam list-roles --query Roles[*].[Arn] --output text | grep test-jackalope-activities-host | head -n 1) | pbcopy'
+alias rmimages='docker rmi $(docker images -q)'
+alias rmps='docker rm $(docker ps -a -q)'
+alias vi='vim'
+alias awsrole='echo using command: aws sts get-caller-identity... ; aws sts get-caller-identity'
+alias unsetcreds='unset AWS_ACCESS_KEY_ID && unset AWS_SECRET_ACCESS_KEY; echo AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are now unset.;'
+#alias sshdevct='cd ~/.ssh; ssh -i "dev-ct-test.pem" ec2-user@10.66.246.192'
+alias psqldb='psql -h kevinryandev2.c6ysfbkulnjt.us-east-1.rds.amazonaws.com -U kevinryandev -d dev'
+

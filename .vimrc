@@ -42,7 +42,8 @@ map <leader>z :wq<CR>
 map <leader>p :bp<CR>
 map <leader>o :bn<CR>
 map <leader>d :bd<CR>
-map <leader>l :ls<CR>
+"map <leader>l :ls<CR>
+map <leader>l :norm i#<CR>
 
 syntax on
 filetype plugin indent on
