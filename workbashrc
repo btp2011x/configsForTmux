@@ -36,6 +36,6 @@ alias rmps='docker rm $(docker ps -a -q)'
 alias vi='vim'
 alias awsrole='echo using command: aws sts get-caller-identity... ; aws sts get-caller-identity'
 alias unsetcreds='unset AWS_ACCESS_KEY_ID && unset AWS_SECRET_ACCESS_KEY; echo AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are now unset.;'
-#alias sshdevct='cd ~/.ssh; ssh -i "dev-ct-test.pem" ec2-user@10.66.246.192'
+alias sshdevct='cd ~/.ssh; ssh -i "dev-ct-test.pem" ec2-user@10.66.246.192'
 alias psqldb='psql -h kevinryandev2.c6ysfbkulnjt.us-east-1.rds.amazonaws.com -U kevinryandev -d dev'
 
