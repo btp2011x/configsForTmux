@@ -1,5 +1,6 @@
 source ~/.bashrc # aliases kept in ~/.bashrc
 
+
 ## Role assumeption ##
 
 export AWS_DEV_TOKEN="INYOKQ47OQBTKPMNDSE5EMSVG57AMLBYSMZD3XFRDXZUYRBQEZOZPNBCICKTYEJO"
@@ -35,7 +36,7 @@ function t2role {
 }
 function arole {
 	ec2metadatadev
-	ec2AssumeRole arn:aws:iam::056684691971:role/app/dev-ct-outbound-data-analysis-AppInstanceRole-1F7V3V9A7BCD4
+	ec2AssumeRole arn:aws:iam::056684691971:role/app/dev-ct-outbound-data-analysis-AppInstanceRole-1CBKX7OAS8PL 
 }
 function grole {
 	ec2metadatadev
@@ -68,10 +69,6 @@ function setawsenv {
     echo "AWS env to ${awsenv}"
 }
 
-function a { 
-	echo -----------------------------------------------------------------------------------------------
-	alias
-}
 function la {
 	ls -A
 }
@@ -88,7 +85,6 @@ function bashp {
 	vi ~/.bash_profile
 }
 function srcbash {
-	printf '\nsourcing .bash_profile and .bashrc...\n\n'
 	source ~/.bash_profile
 }
 function backupbash {
@@ -162,17 +158,16 @@ export TERM=xterm
 export EDITOR='vim'
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
-export PATH=$PATH:$JAVA_HOME/bin/
 
 export SCALA_HOME=/usr/local/share/scala
-export PATH=$PATH:$SCALA_HOME/bin
 
 export JUNIT_HOME=/Library/JUNIT
 export CLASSPATH=$CLASSPATH:$JUNIT_HOME/junit4.10.jar:.
 
+export PATH=$JAVA_HOME/bin/:$SCALA_HOME/bin:$HOME/.jenv/bin:$PATH
+
  #OPAM configuration
 . /Users/btpeterson/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
-export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
 # export Mockito_HOME=/Library/Mockito
@@ -182,8 +177,12 @@ eval "$(jenv init -)"
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-export PS1="\[\033[95m\]\w\[\033[93m\]$(parse_git_branch)\[\033[00m\] $ "
+#export PS1="\[\033[35m\]\w\[\033[93m\]$(parse_git_branch)\[\033[00m\] $ "
 
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+#export PS1="\[\033[35m\]\w\[\033[93m\]$(__git_ps1)\[\033[00m\] $ "
 
+#PS1="[\[\033[32m\]\w]\[\033[0m\]\$(__git_ps1)\n\[\033[1;36m\]\u\[\033[32m\]$ \[\
+#\033[0m\]"
 
-
+PS1="\[\033[35m\]\w\[\033[0m\]\$(__git_ps1)\[\033[35m\] $ \[\033[0m\]"
