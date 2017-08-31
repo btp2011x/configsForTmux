@@ -1,5 +1,6 @@
 
 ## aliases ##
+alias tmuxconf='vi ~/.tmux.conf'
 alias setup='~/github/ec2metadata-role-assumption/setup.sh'
 alias ec2meta='cd ~/github/ec2metadata-role-assumption' 
 alias makedaemon='make -C ~/github/ec2metadata-role-assumption daemon'
