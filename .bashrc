@@ -21,5 +21,3 @@ alias tmux='tmuxinator default'
 alias tmuxconf='vi ~/.tmux.conf'
 alias la='ls -A'
 alias pdd='cd ~/github/csci3081/'
-function sshcs() {
-    ssh ssh pete9934@kh4250-05.cselabs.umn.edu
