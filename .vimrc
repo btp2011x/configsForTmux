@@ -44,6 +44,8 @@ map <leader>o :bn<CR>
 map <leader>d :bd<CR>
 "map <leader>l :ls<CR>
 map <leader>l :norm i#<CR>
+map <leader>s :set paste<CR>
+map <leader>n :set nopaste<CR>
 
 syntax on
 filetype plugin indent on
@@ -55,3 +57,9 @@ set cursorline
 
 set hlsearch
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=Grey guibg=NONE
+
+" set tabs to 4 spaces
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
