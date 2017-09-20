@@ -4,7 +4,6 @@ source ~/.bashrc
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-
 function srcbash {
 	source ~/.bash_profile
 }
@@ -35,7 +34,12 @@ function importconfigs {
     cp ~/github/configsForTmux/default.yml ~/.tmuxinator/default.yml
     printf '\nconfigs imported successfully\n\n'
 }
+
 source ~/.bash_git
 
-PS1="\[\033[35m\]\w\[\033[0m\]\$(__git_ps1)\[\033[35m\] $ \[\033[0m\]"
-
+parse_git_branch() {
+         git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+     }
+export PS1="\[\033[0;35m\]\w\[\033[0;36m\]\$(parse_git_branch)\[\033[00m\]\[\033[0;35m\] $ \[\033[00m\]"
+###  another way to color prompt string one...  ###
+#PS1="\[\033[35m\]\w\[\033[0m\]\$(__git_ps1)\[\033[35m\] $ \[\033[0m\]"
