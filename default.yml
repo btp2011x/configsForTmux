@@ -1,5 +1,4 @@
 name: default
-# hiyaaaaa
 root: ~
 #words words words blah blahsl;kdjfsadkjaf;l
 # Optional tmux socket
@@ -31,12 +30,12 @@ root: ~
 
 windows:
   - editor:
-      layout: cd66,177x51,0,0[178x25,0,0{88x25,0,0,0,89x25,89,0,1},178x25,0,26,2] 
+      layout: fe4a,176x51,0,0{88x51,0,0,9,87x51,89,0[87x25,89,0,│
+             10,87x25,89,26,13]} 
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        -
         -
         -
         #  - server: bundle exec rails s
