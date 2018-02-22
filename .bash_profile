@@ -7,16 +7,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 function srcbash {
 	source ~/.bash_profile
 }
-function backupbash {
-	cp ~/.bash_profile ~/backup
-	cp ~/.bashrc ~/backup
-	printf '\nbash configurations have been backed up to ~/backup...\n\n' 
-}
-function restorebash {
-	cp ~/backup/.bash_profile ~
-	cp ~/backup/.bashrc ~
-	printf '\nbash configurations have been restored by the backup...\n\n'
-}
+
 function exportconfigs {
     cp ~/.bash_profile ~/.bashrc ~/.tmux.conf ~/.vimrc ~/.tmuxinator/default.yml ~/github/configsForTmux
     git -C ~/github/configsForTmux pull
