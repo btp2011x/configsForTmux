@@ -2,7 +2,7 @@
 .cVim-completion-item, .cVim-completion-item .cVim-full, .cVim-completion-item .cVim-left,
 .cVim-completion-item .cVim-right {
   font-family: Helvetica, Helvetica Neue, Neue, sans-serif, monospace, Arial;
-  font-size: 10pt !important;
+  font-size: 13pt !important;
   -webkit-font-smoothing: antialiased !important;
 }
 
@@ -32,7 +32,7 @@
 
 #cVim-command-bar-input {
   background-color: #1b1d1e;
-  color: #bbb;
+  color: #39FF14;
   height: 100%;
   right: 0;
   top: 0;
@@ -94,7 +94,7 @@
 #cVim-link-container, .cVim-link-hint,
 #cVim-hud, #cVim-status-bar {
   font-family: Helvetica, Helvetica Neue, Neue, sans-serif, monospace, Arial;
-  font-size: 10pt !important;
+  font-size: 12pt !important;
   -webkit-font-smoothing: antialiased !important;
 }
 
@@ -108,12 +108,12 @@
 
 .cVim-link-hint {
   position: absolute;
-  color: #302505 !important;
-  background-color: #ffd76e !important;
+  color: #ffd76e !important;
+  background-color: #000000 !important;
   border-radius: 2px !important;
   padding: 2px !important;
-  font-size: 8pt !important;
-  font-weight: 500 !important;
+  font-size: 10pt !important;
+  font-weight: 700 !important;
   text-transform: uppercase !important;
   border: 1px solid #ad810c;
   display: inline-block !important;
@@ -154,4 +154,5 @@
   box-sizing: border-box;
   border: 3px solid yellow;
 }
+
 
