@@ -1,4 +1,8 @@
 source ~/.bashrc
+source ~/.profile
+
+# provide path for NuSMV to function correctly
+export NUSMV_LIBRARY_PATH=/Users/brianpeterson/nusmv/NuSMV-2.6.0/NuSMV/share/nusmv/
 
 # enable colors
 export CLICOLOR=1

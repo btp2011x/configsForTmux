@@ -9,7 +9,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -31,7 +31,7 @@ filetype plugin indent on    " required
 "
 "   HOW TO ...
 "
-" %s/foo/bar/g       " find and replace
+" %s/foo/bar/g       " find and replace foo with bar
 " %s/foo/bar/gc      " find and replace requiring confirmation 
 
 map <leader>b :YcmCompleter GoTo<CR>
