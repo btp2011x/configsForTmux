@@ -1,0 +1,34 @@
+function javae () {
+	JAVA='.java'
+	CLASS='.class'
+	javac $1$JAVA
+	java  $1
+	rm $1$CLASS
+}
+
+function findjdkhome {
+	/usr/libexec/java_home
+}
+
+###############################
+## set some environment vars ##
+
+# enable colors
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+export EDITOR='vim'
+
+# change user icon, add git branch
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\[\033[35m\]\w\[\033[93m\]$(parse_git_branch)\[\033[00m\] $ "
+
+#source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+#export PS1="\[\033[35m\]\w\[\033[93m\]$(__git_ps1)\[\033[00m\] $ "
+
+#PS1="[\[\033[32m\]\w]\[\033[0m\]\$(__git_ps1)\n\[\033[1;36m\]\u\[\033[32m\]$ \[\
+#\033[0m\]"
+
+#PS1="\[\033[35m\]\w\[\033[0m\]\$(__git_ps1)\[\033[35m\] $ \[\033[0m\]"
